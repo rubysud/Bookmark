@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="container">
+   
+    <h1>Edit Book</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+    
+    <!-- Your code here -->
+    <%= form_for @book,html: { multipart: true } do |b| %>  
+  <div class="field"> 
+    <%=b.label :title%> <%=b.text_field :title %><br> 
+    <%= b.label :author %><%=b.text_field :author %><br>
+    <%= b.label :image %> <%=b.file_field :image %>  
+  </div> 
+  <div class="actions"> 
+    <%= b.submit "Update" %> 
+  </div> 
+<% end %>
+
+
+
+  </div>
+</div>

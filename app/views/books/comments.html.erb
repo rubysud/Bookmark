@@ -1,0 +1,10 @@
+ <div id="a1">
+
+  <% id1 = @book.id %>
+<% @comments.each do |comment| %>
+
+<% id2 = comment.id %>
+<p id="a2"> <%= comment.commentforbook %> <%= link_to 'Delete Comment',  "/books/#{id1}/comments/#{id2}", method: :delete %><br></p>
+
+<% end %> 
+</div>

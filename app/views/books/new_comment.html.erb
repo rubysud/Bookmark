@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="container">
+   
+    <h1>Comment The Book</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+    
+    <!-- Your code here -->
+    <%= form_for @comment , :url => { :action => 'create_comment', :controller => 'books' }  do |b| %>  
+  <div class="field"> 
+    <%=b.label :comment%> <%=b.text_field 'commentforbook' %><br> 
+  </div> 
+  <div class="actions"> 
+    <%= b.submit "Create_comment" %> 
+  </div> 
+<% end %>
+
+
+
+  </div>
+</div>
